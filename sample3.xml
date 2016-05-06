@@ -1,0 +1,84 @@
+<circuit>
+	<inputs>
+		<input id="1"/>
+		<input id="2"/>
+		<input id="3"/>
+	</inputs>
+	<gates>
+		<gate id="1"/>
+		<gate id="2"/>
+		<gate id="3"/>
+		<gate id="4"/>
+		<gate id="5"/>
+	</gates>
+	<outputs>
+		<output id="1">
+			<source>
+				<type>gate</type>
+				<id>2</id>
+			</source>
+		</output>
+		<output id="2">
+			<source>
+				<type>gate</type>
+				<id>5</id>
+			</source>
+		</output>
+	</outputs>
+		<connections>
+		<gate id="1" type="XOR">
+			<source>
+				<type>input</type>
+				<id>1</id>
+			</source>
+			<source>
+				<type>input</type>
+				<id>2</id>
+			</source>
+		</gate>
+		<gate id="2" type="XOR">
+			<source>
+				<type>gate</type>
+				<id>1</id>
+			</source>
+			<source>
+				<type>input</type>
+				<id>3</id>
+			</source>
+		</gate>
+		<gate id="3" type="AND">
+			<source>
+				<type>gate</type>
+				<id>1</id>
+			</source>
+			<source>
+				<type>input</type>
+				<id>3</id>
+			</source>
+		</gate>
+		<gate id="4" type="AND">
+			<source>
+				<type>input</type>
+				<id>1</id>
+			</source>
+			<source>
+				<type>input</type>
+				<id>2</id>
+			</source>
+		</gate>
+		<gate id="5" type="OR">
+			<source>
+				<type>gate</type>
+				<id>3</id>
+			</source>
+			<source>
+				<type>gate</type>
+				<id>4</id>
+			</source>
+		</gate>
+	</connections>
+</circuit>
+		
+		
+		
+		
